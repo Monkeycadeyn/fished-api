@@ -25,4 +25,5 @@ WORKDIR /fished-api
 COPY --from=build /fished-api/dist/ ./dist/
 COPY --from=build /fished-api/node_modules ./node_modules
 
+EXPOSE 8080
 CMD [ "node", "dist/main.js"]
